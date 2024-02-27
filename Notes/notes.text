@@ -1,0 +1,56 @@
+Task 1.
+Develop the code according to the given specification. Ensure correctness and security of the application.
+TASK:
+Create an ASP.NET MVC .NET 4.7.2 (Full-Framework) web application in C#/HTML/JS/T-SQL programming languages that enables the user to manage insurance company partners.
+The application should display three pages: a list of all partners, a form for entering a new partner and a form for entering the partner's policy number with the policy amount.
+Information about the partner that should be displayed and saved is:
+· FirstName (alphanumeric, min 2 characters, max 255, mandatory)
+· LastName (alphanumeric, min 2 characters, max 255, mandatory)
+· Address (alphanumeric)
+· PartnerNumber (number, exactly 20 digits, mandatory)
+· CroatianPIN (Croatian OIB data, optional)
+· PartnerTypeId (int (only two values possible: 1 - Personal, 2 - Legal), mandatory)
+· CreatedAtUtc (DateTime, by default it writes the current UTC+0 date at the time of recording the record in the database, mandatory)
+· CreateByUser (email address, max 255 characters, mandatory)
+· IsForeign (bool, required)
+· ExternalCode (alphanumeric min 10, max 20 characters, unique)
+· Gender (letter (the only options are M, F or N), mandatory)
+The policy information to be displayed and saved is:
+· Shelf number (alphanumeric, min 10 characters, max 15, mandatory)
+· Policy amount (decimal, mandatory)
+
+Web Application Pages:
+1.) (default/home page) list of all partners of the insurance company
+- displays all data except FirstName, LastName, Address, CreateByUser, ExternalCode about the partner in columns, it is sorted by record date from the newest to the oldest partner
+- for FirstName and LastName it shows one FullName column that joins the previous two data
+- clicking on the line opens a modal window that displays all the details (all (Address, CreatedBy...) except FirstName, LastName which are again seen as FullName) of the selected partner
+- it is possible to close the window and click again on another partner
+- at the top of the page above the list there is a button that navigates the user to another page - a form for entering partners
+- the button for entering the partner's policy, which opens a dialogue for entering the details of the policy
+- a partner with more than 5 policies or an amount greater than HRK 5,000 must be marked * before the name and in real time
+2.) form for entering a partner
+- displays a form with all partner data
+- validates all data upon save attempt, prevents incorrect entry
+- enables safe entry of a new partner by clicking on the button at the bottom of the form
+- after a successful save, it redirects the user to a list where the newly entered partner can be seen at the top
+                 - in case of successful redirection, the new line must be visually distinguished after saving (e.g. it has a lighter or darker background, bold font, etc.)
+                
+Technical requirements:
+- save information about partners in a database of your choice
+- use the Dapper Micro ORM library to connect to the database from C#
+- use the Bootstrap4 UI library to design the HTML interface
+- upload the solution to the public github.com repository and tag the final commit with "delivery-v1"
+ 
+Approach the task as if you were delivering it to the end user, and ask yourself what level of quality your client would expect the delivery to be. Anything you think you can add is welcome, but focus on meeting the pre-set requirements.
+Task 2.
+It is necessary to read the attached user request and the initial specification and identify key parts of the system, key processes and potential problems. Based on the requirements analysis, it is necessary to design the architecture of the solution. The solution does not have to be detailed, but it is important to include the conceptual design of the base, "big picture" diagrams of key parts of the system and pseudocode of key processes.
+
+User request:
+It is necessary to design a parking management system. The system should ensure the charging of the parking lot according to the time the parking space is occupied. Payment is made at the payment machines on each floor or by pre-signed contracts. Potential users need to know the number of free spaces in the garage, and it is desirable to indicate the number of free spaces per garage floor as well.
+The owner of the garage wants to have a monthly insight into the operation of the garage in order to be able to do a business analysis of the operation of the garage.
+Planned garage events: In rainy weather, the price of uncovered spaces is 50% cheaper than covered spaces.
+
+Specification:
+After talking with the applicant, it was established that the garage user has 10 minutes to exit the garage after charging the card, while at the end of that time the user should pay for additional hours. The conversation did not clarify whether a card or some other way of marking the time of entering the garage will be used. The client certainly does not want the possibility of paying at the exit from the garage.
+Uncovered parking spaces will not exceed 15% of the garage capacity. A wet spot, which has a "rainy" discount, is considered when at least 33% of the parked time the car was in the rain.
+The client wants monthly work reports of Mr

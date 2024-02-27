@@ -1,0 +1,2 @@
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub\obj\Debug\Insure.Partners.Hub.csproj.AssemblyReference.cache
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub\obj\Debug\Insure.Partners.Hub.csproj.CoreCompileInputs.cache
