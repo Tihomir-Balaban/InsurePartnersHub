@@ -1,4 +1,5 @@
 ﻿USE [DB_NAME_HERE]
+GO
 
 CREATE TABLE Partners (
     Id INT IDENTITY(1,1) PRIMARY KEY,
@@ -6,7 +7,7 @@ CREATE TABLE Partners (
     LastName NVARCHAR(255) NOT NULL,
     Address NVARCHAR(MAX),
     PartnerNumber BIGINT NOT NULL,
-    CroatianPIN NVARCHAR(11),
+    CroatianPIN BIGINT NOT NULL,
     PartnerTypeId INT NOT NULL,
     CreatedAtUtc DATETIME NOT NULL,
     CreateByUser NVARCHAR(255) NOT NULL,
