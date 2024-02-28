@@ -176,6 +176,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartnersController.cs" />
+    <Compile Include="Controllers\PoliciesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,6 +234,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Partners\Index.cshtml" />
+    <Content Include="Views\Policies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -267,6 +271,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Insure.Partners.Hub.Models\Insure.Partners.Hub.Models.csproj">
+      <Project>{65e852a8-3736-4f0d-9369-6868ca5a031a}</Project>
+      <Name>Insure.Partners.Hub.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Insure.Partners.Hub.Repository\Insure.Partners.Hub.Repository.csproj">
       <Project>{AAB67E81-3433-4856-A860-B212C934D9E7}</Project>
       <Name>Insure.Partners.Hub.Repository</Name>

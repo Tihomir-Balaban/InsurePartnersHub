@@ -79,6 +79,10 @@
     <Compile Include="Services\PolicyService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Insure.Partners.Hub.Models\Insure.Partners.Hub.Models.csproj">
+      <Project>{65E852A8-3736-4F0D-9369-6868CA5A031A}</Project>
+      <Name>Insure.Partners.Hub.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Insure.Partners.Hub.Repository\Insure.Partners.Hub.Repository.csproj">
       <Project>{AAB67E81-3433-4856-A860-B212C934D9E7}</Project>
       <Name>Insure.Partners.Hub.Repository</Name>
