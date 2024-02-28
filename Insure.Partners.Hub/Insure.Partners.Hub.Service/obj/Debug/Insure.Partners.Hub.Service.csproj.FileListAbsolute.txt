@@ -1,9 +1,5 @@
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Insure.Partners.Hub.Service.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Insure.Partners.Hub.Service.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.csproj.AssemblyReference.cache
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.csproj.CoreCompileInputs.cache
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.pdb
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Insure.Partners.Hub.Repository.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
@@ -14,9 +10,6 @@ D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Serv
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.Razor.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Abstractions.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Container.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Mvc.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\WebActivatorEx.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Insure.Partners.Hub.Models.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Dapper.dll
@@ -29,10 +22,10 @@ D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Serv
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Abstractions.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Container.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Mvc.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Unity.Mvc.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Insure.Partners.Hub.Models.pdb
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\bin\Debug\Dapper.xml
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.csproj.AssemblyReference.cache
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.csproj.CoreCompileInputs.cache
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.csproj.CopyComplete
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.dll
+D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Service\obj\Debug\Insure.Partners.Hub.Service.pdb

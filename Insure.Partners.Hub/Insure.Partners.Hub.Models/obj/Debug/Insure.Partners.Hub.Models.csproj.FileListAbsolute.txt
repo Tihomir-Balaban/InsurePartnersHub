@@ -9,9 +9,6 @@ D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Mode
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Razor.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Abstractions.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Container.dll
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Mvc.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\WebActivatorEx.dll
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Threading.Tasks.Extensions.xml
@@ -21,10 +18,6 @@ D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Mode
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Abstractions.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Container.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Mvc.pdb
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\Unity.Mvc.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.AssemblyReference.cache
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.CoreCompileInputs.cache
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.CopyComplete
