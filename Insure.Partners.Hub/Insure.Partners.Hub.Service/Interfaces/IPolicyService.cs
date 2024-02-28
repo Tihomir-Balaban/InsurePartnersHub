@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Insure.Partners.Hub.Models.Dto;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Insure.Partners.Hub.Service.Interfaces
 {
     public interface IPolicyService
     {
+        Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId);
     }
 }
