@@ -18,7 +18,6 @@ D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Mode
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.AssemblyReference.cache
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.CoreCompileInputs.cache
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.csproj.CopyComplete
 D:\Work\Solutions\InsurePartnersHub\Insure.Partners.Hub\Insure.Partners.Hub.Models\obj\Debug\Insure.Partners.Hub.Models.dll
