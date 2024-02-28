@@ -1,5 +1,8 @@
-﻿using Insure.Partners.Hub.Repository.Interfaces;
+﻿using Insure.Partners.Hub.Models.Dto;
+using Insure.Partners.Hub.Repository.Interfaces;
 using Insure.Partners.Hub.Service.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Insure.Partners.Hub.Service.Services
 {
@@ -11,5 +14,8 @@ namespace Insure.Partners.Hub.Service.Services
         {
             this.policyRepository = policyRepository;
         }
+
+        public async Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId)
+            => await policyRepository.GetByPartnerIdAsync(partnerId);
     }
 }
