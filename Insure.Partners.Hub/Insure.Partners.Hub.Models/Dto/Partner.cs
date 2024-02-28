@@ -17,7 +17,6 @@ namespace Insure.Partners.Hub.Models.Dto
         public bool IsForeign { get; set; }
         public string ExternalCode { get; set; }
         public char Gender { get; set; }
-        // Navigation property
         public List<Policy> Policies { get; set; }
     }
 }
