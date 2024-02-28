@@ -20,8 +20,5 @@ namespace Insure.Partners.Hub.Repository.Repositories
                 return await connection.QueryAsync<Policy>(query, new { PartnerId = partnerId });
             }
         }
-
-        // Implement other CRUD operations similarly
     }
-
 }

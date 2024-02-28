@@ -20,8 +20,5 @@ namespace Insure.Partners.Hub.Repository.Repositories
                 return await connection.QueryAsync<Partner>(query);
             }
         }
-
-        // Implement other methods (e.g., Create, Update) similarly
     }
-
 }
