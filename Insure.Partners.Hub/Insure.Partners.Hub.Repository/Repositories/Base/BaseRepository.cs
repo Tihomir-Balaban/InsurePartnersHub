@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Insure.Partners.Hub.Repository.Repositories.Base
@@ -7,8 +8,10 @@ namespace Insure.Partners.Hub.Repository.Repositories.Base
     {
         private readonly string connectionString;
 
-        public BaseRepository(string connectionString)
-            => this.connectionString = connectionString;
+        public BaseRepository()
+        {
+            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        }
 
         protected IDbConnection CreateConnection()
             => new SqlConnection(connectionString);

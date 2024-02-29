@@ -17,5 +17,10 @@ namespace Insure.Partners.Hub.Service.Services
 
         public async Task<IEnumerable<Partner>> GetAllAsync()
             => await partnerRepository.GetAllAsync();
+
+
+        public async Task<Partner> AddPartnerAsync(Partner partner)
+            => await partnerRepository.AddPartnerAsync(partner);
+
     }
 }

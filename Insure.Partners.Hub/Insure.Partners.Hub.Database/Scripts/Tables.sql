@@ -7,7 +7,7 @@ CREATE TABLE Partners (
     LastName NVARCHAR(255) NOT NULL,
     Address NVARCHAR(MAX),
     PartnerNumber BIGINT NOT NULL,
-    CroatianPIN BIGINT NOT NULL,
+    CroatianPIN BIGINT NULL,
     PartnerTypeId INT NOT NULL,
     CreatedAtUtc DATETIME NOT NULL,
     CreateByUser NVARCHAR(255) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE Partners (
     Gender CHAR(1) NOT NULL CHECK (Gender IN ('M', 'F', 'N'))
 );
 
-CREATE TABLE Policies (
+CREATE TABLE Policy (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     ShelfNumber NVARCHAR(15) NOT NULL,
     PolicyAmount DECIMAL(18, 2) NOT NULL,

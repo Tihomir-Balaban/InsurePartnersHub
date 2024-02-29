@@ -17,5 +17,8 @@ namespace Insure.Partners.Hub.Service.Services
 
         public async Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId)
             => await policyRepository.GetByPartnerIdAsync(partnerId);
+
+        public async Task<Policy> AddPolicyAsync(Policy policy)
+            => await policyRepository.AddPolicyAsync(policy);
     }
 }

@@ -1,0 +1,35 @@
+﻿@model Insure.Partners.Hub.Models.Dto.Policy
+
+@{
+    ViewBag.Title = "Enter Policy Details";
+    int id = (int)ViewBag.PartnerId;
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Create", "Policies", FormMethod.Post)) {
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.PartnerId)
+
+<div class="form-group">
+    <div>
+        @Html.LabelFor(model => model.ShelfNumber)
+        @Html.TextBoxFor(model => model.ShelfNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ShelfNumber)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.PolicyAmount)
+        @Html.TextBoxFor(model => model.PolicyAmount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ShelfNumber)
+    </div>
+
+    <div>
+
+        @Html.Hidden("PartnerId", id, new { @class = "form-control", @hidden = "true" })
+        @Html.ValidationMessageFor(model => model.PartnerId)
+    </div>
+</div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+}

@@ -7,5 +7,6 @@ namespace Insure.Partners.Hub.Repository.Interfaces
     public interface IPartnerRepository
     {
         Task<IEnumerable<Partner>> GetAllAsync();
+        Task<Partner> AddPartnerAsync(Partner partner);
     }
 }

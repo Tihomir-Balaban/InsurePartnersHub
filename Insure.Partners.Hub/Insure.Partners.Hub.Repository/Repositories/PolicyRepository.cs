@@ -9,15 +9,39 @@ namespace Insure.Partners.Hub.Repository.Repositories
 {
     public class PolicyRepository : BaseRepository, IPolicyRepository
     {
-        public PolicyRepository(string connectionString) : base(connectionString) { }
+        public PolicyRepository() : base() { }
 
         public async Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId)
         {
-            var query = "SELECT * FROM Policies WHERE PartnerId = @PartnerId";
+            var query = "SELECT * FROM [Policy] WHERE PartnerId = @PartnerId";
 
             using (var connection = CreateConnection())
             {
                 return await connection.QueryAsync<Policy>(query, new { PartnerId = partnerId });
+            }
+        }
+
+        public async Task<Policy> AddPolicyAsync(Policy policy)
+        {
+
+            var query = @"INSERT INTO [Policy] (ShelfNumber, PolicyAmount, PartnerId)
+                          VALUES (@ShelfNumber, @PolicyAmount, @PartnerId)";
+
+            var queryRetrieveEnteredRecord = @"SELECT TOP 1 * FROM [Policy] ORDER BY ID DESC";
+
+            var data = new
+            {
+                ShelfNumber = policy.ShelfNumber,
+                PolicyAmount = policy.PolicyAmount,
+                PartnerId = policy.PartnerId
+            };
+
+
+            using (var connection = CreateConnection())
+            {
+                await connection.ExecuteAsync(query, data);
+
+                return await connection.QuerySingleAsync<Policy>(queryRetrieveEnteredRecord);
             }
         }
     }

@@ -1,1 +1,78 @@
-﻿
+﻿@model IEnumerable<Insure.Partners.Hub.Models.Dto.Partner>
+
+@{
+    ViewBag.Title = "Partners List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<a href="@Url.Action("Create", "Partners")" class="btn btn-primary">Add New Partner</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>FullName</th>
+            <th>PartnerNumber</th>
+            <th>OIB</th>
+            <th>PartnerTypeId</th>
+            <th>Gender</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var gender = item.Gender == 'M' ? "Male" : item.Gender == 'F' ? "Female" : "Non-Binary";
+            var isForeign = item.IsForeign ? "Yes" : "No";
+            var partnerTypeId = item.PartnerTypeId == 1 ? "Personal" : "Legal";
+
+            <tr class="partner-row @item.Id" data-partner-id="@item.Id" data-partner-address="@item.Address" data-partner-createdon="@item.CreatedAtUtc" data-partner-createdby="@item.CreateByUser">
+                <td>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</td>
+                <td>@Html.DisplayFor(modelItem => item.PartnerNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.CroatianPIN)</td>
+                <td>@Html.DisplayFor(modelItem => partnerTypeId)</td>
+                <td>@Html.DisplayFor(modelItem => gender)</td>
+                <td>@Html.DisplayFor(modelItem => isForeign)</td>
+            </tr>
+
+            <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detailsModalLabel">Partner Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </tbody>
+
+    <script>
+        var partners = document.querySelectorAll('.partner-row');
+
+        for (var i = 0; i < partners.length; i++) {
+
+            partners[i].addEventListener('click', (event) => {
+                var address = event.srcElement.parentElement.getAttribute('data-partner-address');
+                var createdOn = event.srcElement.parentElement.getAttribute('data-partner-createdon');
+                var createdBy = event.srcElement.parentElement.getAttribute('data-partner-createdby');
+                var partnerId = event.srcElement.parentElement.getAttribute('data-partner-id');
+
+                console.log(event.srcElement.parentElement.getAttribute('data-partner-address'))
+
+                var modal = $('#detailsModal');
+
+                modal.find('.modal-body').html('<p><strong>Address:</strong> ' + address + '</p><p><strong>Created By:</strong> ' + createdBy + '</p><p><strong>Created On:</strong> ' + createdOn + '</p>' + '<a href="/Policies/Create?partnerId=' + partnerId + '" class="btn btn-primary">Add Policy</a>');
+
+        modal.modal('show');
+    });
+}
+    </script>
+</table>

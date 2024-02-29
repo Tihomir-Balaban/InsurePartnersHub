@@ -1,0 +1,98 @@
+﻿@model Insure.Partners.Hub.Models.Dto.Partner
+
+@{
+    ViewBag.Title = "Add New Partner";
+    ViewBag.IsForeignItemList = new SelectList(new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Yes", Value = "true" },
+        new SelectListItem { Text = "No", Value = "false" },
+    }, "Value", "Text");
+
+    ViewBag.GenderItemList = new SelectList(new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Male", Value = "M" },
+        new SelectListItem { Text = "Female", Value = "F" },
+        new SelectListItem { Text = "Non-Binary", Value = "F" },
+    }, "Value", "Text");
+
+    ViewBag.PartnerTypeIdItemList = new SelectList(new List<SelectListItem>
+    {
+    new SelectListItem { Text = "Personal", Value = "1" },
+    new SelectListItem { Text = "Legal", Value = "2" },
+    }, "Value", "Text");
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Create", "Partners", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-group">
+
+    <div>
+        @Html.LabelFor(model => model.FirstName)
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.LastName)
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.Address)
+        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.PartnerNumber)
+        @Html.TextBoxFor(model => model.PartnerNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PartnerNumber, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.CroatianPIN, "OIB")
+        @Html.TextBoxFor(model => model.CroatianPIN, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CroatianPIN, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.PartnerTypeId, "Partner Type")
+        @Html.DropDownListFor(model => model.PartnerTypeId, (SelectList)ViewBag.PartnerTypeIdItemList, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PartnerTypeId, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.CreateByUser, "Email Address")
+        @Html.TextBoxFor(model => model.CreateByUser, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CreateByUser, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.IsForeign, "Foreign?")
+        @Html.DropDownListFor(model => model.IsForeign, (SelectList)ViewBag.IsForeignItemList, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IsForeign, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.ExternalCode)
+        @Html.TextBoxFor(model => model.ExternalCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ExternalCode, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.Gender)
+        @Html.DropDownListFor(model => model.Gender, (SelectList)ViewBag.GenderItemList, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+    </div>
+</div>
+    <button type="submit" class="btn btn-primary">Save and Add Policy for Partner</button>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

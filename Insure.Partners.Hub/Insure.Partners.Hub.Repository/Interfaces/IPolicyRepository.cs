@@ -7,5 +7,6 @@ namespace Insure.Partners.Hub.Repository.Interfaces
     public interface IPolicyRepository
     {
         Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId);
+        Task<Policy> AddPolicyAsync(Policy policy);
     }
 }
