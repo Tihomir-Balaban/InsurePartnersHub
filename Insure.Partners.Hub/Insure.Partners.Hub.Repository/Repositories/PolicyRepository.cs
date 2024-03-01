@@ -13,7 +13,7 @@ namespace Insure.Partners.Hub.Repository.Repositories
 
         public async Task<IEnumerable<Policy>> GetByPartnerIdAsync(int partnerId)
         {
-            var query = "SELECT * FROM [Policy] WHERE PartnerId = @PartnerId";
+            var query = "SELECT * FROM [Policy] WHERE [PartnerId] = @PartnerId;";
 
             using (var connection = CreateConnection())
             {
@@ -21,11 +21,21 @@ namespace Insure.Partners.Hub.Repository.Repositories
             }
         }
 
+        public async Task<IEnumerable<Policy>> GetByPartnersIdAsync(int[] partnerIds)
+        {
+            var query = "SELECT * FROM [Policy] WHERE [PartnerId] IN @PartnerIds;";
+
+            using (var connection = CreateConnection())
+            {
+                return await connection.QueryAsync<Policy>(query, new { PartnerIds = partnerIds });
+            }
+        }
+
         public async Task<Policy> AddPolicyAsync(Policy policy)
         {
 
             var query = @"INSERT INTO [Policy] (ShelfNumber, PolicyAmount, PartnerId)
-                          VALUES (@ShelfNumber, @PolicyAmount, @PartnerId)";
+                          VALUES (@ShelfNumber, @PolicyAmount, @PartnerId);";
 
             var queryRetrieveEnteredRecord = @"SELECT TOP 1 * FROM [Policy] ORDER BY ID DESC";
 
