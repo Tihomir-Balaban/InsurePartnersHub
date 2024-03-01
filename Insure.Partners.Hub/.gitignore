@@ -40,6 +40,8 @@ x64/
 *.tmp
 *.tmp_proj
 *.log
+*.testlog
+*.manifest
 *.vspscc
 *.vssscc
 .builds
