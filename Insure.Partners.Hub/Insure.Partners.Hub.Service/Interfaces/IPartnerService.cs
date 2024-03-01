@@ -8,6 +8,7 @@ namespace Insure.Partners.Hub.Service.Interfaces
     public interface IPartnerService
     {
         Task<IEnumerable<PartnerViewModel>> GetAllAsync();
-        Task<Partner> AddPartnerAsync(Partner partner);
+        Task<IEnumerable<PartnerViewModel>> GetAllExceptByIdAsync(int id);
+        Task<PartnerViewModel> AddPartnerAsync(Partner partner);
     }
 }
