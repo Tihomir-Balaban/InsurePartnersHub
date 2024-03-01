@@ -8,6 +8,7 @@ namespace Insure.Partners.Hub.Repository.Interfaces
     {
         Task<IEnumerable<Partner>> GetAllAsync();
         Task<IEnumerable<Partner>> GetAllExceptByIdAsync(int id);
+        Task<Partner> GetByIdAsync(int id);
         Task<Partner> AddPartnerAsync(Partner partner);
     }
 }

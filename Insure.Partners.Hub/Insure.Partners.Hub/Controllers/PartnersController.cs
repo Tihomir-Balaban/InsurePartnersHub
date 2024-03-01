@@ -50,9 +50,8 @@ namespace Insure.Partners.Hub.Controllers
             {
                 return View(partner);
             }
-            var result = await partnerService.AddPartnerAsync(partner);
 
-            ViewBag.PartnerId = result.Id;
+            var result = await partnerService.AddPartnerAsync(partner);
 
             return RedirectToAction("Index", "Partners", result);
         }

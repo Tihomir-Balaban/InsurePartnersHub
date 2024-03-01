@@ -35,6 +35,17 @@ namespace Insure.Partners.Hub.Repository.Repositories
             }
         }
 
+        public async Task<Partner> GetByIdAsync(int id)
+        {
+            var query = @"SELECT * FROM [Partners] 
+                        WHERE [Id] = @Id";
+
+            using (var connection = CreateConnection())
+            {
+                return await connection.QuerySingleAsync<Partner>(query, new { Id = id });
+            }
+        }
+
         public async Task<Partner> AddPartnerAsync(Partner partner)
         {
             var query = @"INSERT INTO [Partners] (FirstName, LastName, Address, PartnerNumber, CroatianPIN, PartnerTypeId, CreatedAtUtc, CreateByUser, IsForeign, ExternalCode, Gender)

@@ -1,11 +1,7 @@
-﻿using Insure.Partners.Hub.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Insure.Partners.Hub.Models.Dto;
+using Insure.Partners.Hub.Service.Interfaces;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using Insure.Partners.Hub.Models.Dto;
 
 namespace Insure.Partners.Hub.Controllers
 {
@@ -37,9 +33,14 @@ namespace Insure.Partners.Hub.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(Policy policy)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(policy);
+            }
+
             var result = await policyService.AddPolicyAsync(policy);
 
-            return RedirectToAction("Index", "Policies", new { partnerId = policy.PartnerId });
+            return RedirectToAction("Index", "Policies", new { partnerId = result.PartnerId });
         }
     }
 }

@@ -111,7 +111,7 @@
 
                 var modal = $('#detailsModal');
 
-                modal.find('.modal-body').html('<p><strong>Address:</strong> ' + address + '</p><p><strong>Created By:</strong> ' + createdBy + '</p><p><strong>Created On:</strong> ' + createdOn + '</p>' + '<a href="/Policies/Create?partnerId=' + partnerId + '" class="btn btn-primary">Add Policy</a>');
+                modal.find('.modal-body').html('<p><strong>Address:</strong> ' + address + '</p><p><strong>Created By:</strong> ' + createdBy + '</p><p><strong>Created On:</strong> ' + createdOn + '</p>' + '<a href="/Policies/Create?partnerId=' + partnerId + '" class="btn btn-primary">Add Policy</a>' + '<a href="/Policies/Index?partnerId=' + partnerId + '" class="btn btn-primary">View Policies</a>');
 
         modal.modal('show');
     });
