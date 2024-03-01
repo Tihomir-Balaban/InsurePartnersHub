@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Insure.Partners.Hub.Models.Dto.Partner>
+﻿@model IEnumerable<Insure.Partners.Hub.Models.ViewModels.PartnerViewModel>
 
 @{
     ViewBag.Title = "Partners List";
@@ -27,14 +27,25 @@
             var isForeign = item.IsForeign ? "Yes" : "No";
             var partnerTypeId = item.PartnerTypeId == 1 ? "Personal" : "Legal";
 
-            <tr class="partner-row @item.Id" data-partner-id="@item.Id" data-partner-address="@item.Address" data-partner-createdon="@item.CreatedAtUtc" data-partner-createdby="@item.CreateByUser">
-                <td>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</td>
-                <td>@Html.DisplayFor(modelItem => item.PartnerNumber)</td>
-                <td>@Html.DisplayFor(modelItem => item.CroatianPIN)</td>
-                <td>@Html.DisplayFor(modelItem => partnerTypeId)</td>
-                <td>@Html.DisplayFor(modelItem => gender)</td>
-                <td>@Html.DisplayFor(modelItem => isForeign)</td>
-            </tr>
+        <tr class="partner-row @item.Id" data-partner-id="@item.Id" data-partner-address="@item.Address" data-partner-createdon="@item.CreatedAtUtc" data-partner-createdby="@item.CreateByUser">
+            @if (item.IsMarked)
+            {
+                <td>
+                    @Html.Raw("* " + item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+            }
+            <td>@Html.DisplayFor(modelItem => item.PartnerNumber)</td>
+            <td>@Html.DisplayFor(modelItem => item.CroatianPIN)</td>
+            <td>@Html.DisplayFor(modelItem => partnerTypeId)</td>
+            <td>@Html.DisplayFor(modelItem => gender)</td>
+            <td>@Html.DisplayFor(modelItem => isForeign)</td>
+        </tr>
 
             <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
