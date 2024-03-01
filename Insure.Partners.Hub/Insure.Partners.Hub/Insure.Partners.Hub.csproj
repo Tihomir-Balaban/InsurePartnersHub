@@ -183,7 +183,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Views\Partners\_Modal.cshtml" />
     <None Include="Views\Policies\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
