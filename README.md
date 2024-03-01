@@ -31,6 +31,9 @@ This is a practice task built on .NET Framework 4.7.2 and ASP.NET MVC.
     Setup your SSMS to have a database for Insure Partners Hub and an admin user available for connection string connection to DB
   </li>
   <li>
+    Add your connection string info to the Web.config file
+  </li>
+  <li>
     Use the Tables.sql file in the Database project to set the table structure for the DB
   </li>
   <li>
