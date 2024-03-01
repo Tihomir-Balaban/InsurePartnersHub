@@ -18,9 +18,9 @@ namespace Insure.Partners.Hub.Controllers
 
         public async Task<ActionResult> Index()
         {
-            var partners = await partnerService.GetAllAsync();
+            var partnersViewModel = await partnerService.GetAllAsync();
 
-            return View(partners);
+            return View(partnersViewModel);
         }
 
         [HttpGet]
