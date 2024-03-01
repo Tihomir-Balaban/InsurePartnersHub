@@ -16,9 +16,23 @@ namespace Insure.Partners.Hub.Controllers
             this.partnerService = partnerService;
         }
 
-        public async Task<ActionResult> Index()
+        [HttpGet]
+        public async Task<ActionResult> Index(PartnerViewModel newlyAddedPartner)
         {
-            var partnersViewModel = await partnerService.GetAllAsync();
+            var partnersViewModel = new List<PartnerViewModel>();
+
+            if (!newlyAddedPartner.IsNew)
+            {
+                 partnersViewModel.AddRange(await partnerService.GetAllAsync());
+            }
+            else
+            {
+                var allOldPartnerViewModels = await partnerService.GetAllExceptByIdAsync(newlyAddedPartner.Id);
+
+                partnersViewModel.Add(newlyAddedPartner);
+
+                partnersViewModel.AddRange(allOldPartnerViewModels);
+            }
 
             return View(partnersViewModel);
         }
@@ -40,7 +54,7 @@ namespace Insure.Partners.Hub.Controllers
 
             ViewBag.PartnerId = result.Id;
 
-            return RedirectToAction("Create", "Policies");
+            return RedirectToAction("Index", "Partners", result);
         }
     }
 }

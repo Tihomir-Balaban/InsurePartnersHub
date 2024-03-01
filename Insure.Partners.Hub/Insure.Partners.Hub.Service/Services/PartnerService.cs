@@ -21,15 +21,31 @@ namespace Insure.Partners.Hub.Service.Services
 
         public async Task<IEnumerable<PartnerViewModel>> GetAllAsync()
         {
-            var partners =  await partnerRepository.GetAllAsync();
+            var partners = await partnerRepository.GetAllAsync();
 
             var results = await ConverAndCheckForMarks(partners);
 
             return results;
         }
 
-        public async Task<Partner> AddPartnerAsync(Partner partner)
-            => await partnerRepository.AddPartnerAsync(partner);
+        public async Task<IEnumerable<PartnerViewModel>> GetAllExceptByIdAsync(int id)
+        {
+            var partners = await partnerRepository.GetAllExceptByIdAsync(id);
+
+            var results = await ConverAndCheckForMarks(partners);
+
+            return results;
+        }
+
+        public async Task<PartnerViewModel> AddPartnerAsync(Partner partner)
+        {
+            var newPartner = await partnerRepository.AddPartnerAsync(partner);
+
+            var result = ConverToViewModel(new Partner[] { newPartner }).Single();
+            result.IsNew = true;
+
+            return result;
+        }
 
         #region Private Methods
         private async Task<IEnumerable<PartnerViewModel>> ConverAndCheckForMarks(IEnumerable<Partner> partners)
