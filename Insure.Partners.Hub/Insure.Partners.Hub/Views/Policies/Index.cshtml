@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Insure.Partners.Hub.Models.ViewModels.PolicyViewModel>
+
+@{
+    ViewBag.Title = "Partner Policies List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>FullName</th>
+            <th>ShelfNumber</th>
+            <th>PolicyAmount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.PartnerFullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.ShelfNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.PolicyAmount)</td>
+            </tr>
+        }
+    </tbody>
+</table>
