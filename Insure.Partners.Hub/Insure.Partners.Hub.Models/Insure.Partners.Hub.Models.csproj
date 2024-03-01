@@ -80,6 +80,7 @@
     <Compile Include="Dto\Policy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DropDownModel.cs" />
+    <Compile Include="ViewModels\PartnerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
